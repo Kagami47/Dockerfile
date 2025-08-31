@@ -18,7 +18,7 @@ RUN apk add --update --no-cache \
 WORKDIR $PROJECT_DIR
 
 # 克隆项目并安装依赖
-RUN git clone https://github.com/saicaca/fuwari.git . \
+RUN git clone https://github.com/matsuzaka-yuki/Mizuki.git . \
     && pnpm install --child-concurrency=1
 
 # 复制 entrypoint 脚本并设置权限
