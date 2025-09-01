@@ -31,3 +31,6 @@ EXPOSE ${WEB_DEV_PORT}
 
 # 设置入口点
 ENTRYPOINT ["/entrypoint.sh"]
+
+# 最终运行目录
+WORKDIR $RUN_DIR
