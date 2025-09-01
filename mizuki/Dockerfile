@@ -18,8 +18,8 @@ RUN apk add --update --no-cache \
 WORKDIR $PROJECT_DIR
 
 # 克隆项目并安装依赖
-RUN git clone https://github.com/matsuzaka-yuki/Mizuki.git . \
-    && pnpm install --child-concurrency=1
+RUN git clone https://github.com/saicaca/fuwari.git . \
+    && pnpm install --child-concurrency=1 
 
 # 复制 entrypoint 脚本并设置权限
 COPY entrypoint.sh /entrypoint.sh
@@ -30,3 +30,6 @@ EXPOSE ${WEB_DEV_PORT}
 
 # 设置入口点
 ENTRYPOINT ["/entrypoint.sh"]
+
+# 最终运行目录
+WORKDIR $RUN_DIR
