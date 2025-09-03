@@ -6,6 +6,7 @@ init_directory() {
     if [ -d "$RUN_DIR" ] && [ -z "$(ls -A "$RUN_DIR")" ]; then
         echo "正在从$PROJECT_DIR初始化到$RUN_DIR"
         cp -a "$PROJECT_DIR"/. "$RUN_DIR"/
+        rm -rf "${PROJECT_DIR}"
     fi
 }
 
@@ -19,7 +20,6 @@ cd ${RUN_DIR}
 if [ "$1" = "bash" ]; then
     exec bash
 else
-    rm -rf "${PROJECT_DIR}"
     exec pnpm dev --host --port "${WEB_DEV_PORT}"
 
 fi
