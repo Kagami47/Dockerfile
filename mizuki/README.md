@@ -4,7 +4,7 @@ cd ./Dockerfile/mizuki
 ```
 构建镜像
 ```
-docker build -t mizuki .
+docker build --no-cache -t mizuki .
 ```
 创建容器
 ```
