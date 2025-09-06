@@ -7,6 +7,7 @@ init_directory() {
         echo "正在从${PROJECT_DIR}初始化到${RUN_DIR}"
         cp -a "${PROJECT_DIR}"/. "${RUN_DIR}"/
         rm -rf "${PROJECT_DIR}"
+    fi
 }
 
 # 执行初始化
