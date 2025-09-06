@@ -4,7 +4,7 @@ cd ./Dockerfile/fuwari
 ```
 构建镜像
 ```
-docker build -t fuwari .
+docker build --no-cache -t fuwari .
 ```
 创建容器
 ```
